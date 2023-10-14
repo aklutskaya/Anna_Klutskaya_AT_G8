@@ -21,15 +21,24 @@ public abstract class Container extends Matter {
     }
 
 
-    public class Bottle extends Container {
+    public class Bottle extends Container implements Storable{
 
+        public Bottle(int mass, String name) {
+            super(mass, name);
+        }
     }
 
     public class Mug extends Container {
 
+        public Mug(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public class Can extends Container {
+    public class Can extends Container implements Storable{
 
+        public Can(int mass, String name) {
+            super(mass, name);
+        }
     }
 }

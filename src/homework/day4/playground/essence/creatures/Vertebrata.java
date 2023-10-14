@@ -14,12 +14,23 @@ public abstract class Vertebrata extends Animal {
         System.out.println(message);
     }
 }
-    public  class Pigeon extends Vertebrata {
+    public class Pigeon extends Vertebrata {
+        public Pigeon(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public  class Raven extends Vertebrata {
+    public class Raven extends Vertebrata {
+        public Raven(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public  class Crocodile extends Vertebrata {
+    public class Crocodile extends Vertebrata implements Crawlable {
+
+        public Crocodile(int mass, String name) {
+            super(mass, name);
+        }
     }
+
 }

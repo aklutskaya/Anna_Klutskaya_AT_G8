@@ -1,6 +1,8 @@
 package homework.day4.playground.essence.craft.air;
 
+import homework.day4.playground.essence.Flyable;
 import homework.day4.playground.essence.Matter;
+import homework.day4.playground.essence.craft.Transportable;
 import homework.day4.playground.essence.creatures.Vegetable;
 
 public abstract class AirVehicles extends Matter {
@@ -20,15 +22,24 @@ public abstract class AirVehicles extends Matter {
         this.name = name;
     }
 
-//    public class Airplane extends AirVehicles {
-//
-//    }
+    public class Airplane extends AirVehicles implements Flyable, Transportable {
 
-    public class Copter extends AirVehicles {
-
+        public Airplane(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public class Rocket extends AirVehicles {
+    public class Copter extends AirVehicles implements Flyable, Transportable {
 
+        public Copter(int mass, String name) {
+            super(mass, name);
+        }
+    }
+
+    public class Rocket extends AirVehicles implements Flyable, Transportable {
+
+        public Rocket(int mass, String name) {
+            super(mass, name);
+        }
     }
 }

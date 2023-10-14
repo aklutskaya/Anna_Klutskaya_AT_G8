@@ -1,5 +1,7 @@
 package homework.day4.playground.essence.creatures;
 
+import homework.day4.playground.essence.Flyable;
+
 public abstract class Insect extends Animal{
 
 
@@ -7,7 +9,7 @@ public abstract class Insect extends Animal{
         super(mass, name);
     }
 
-    public class Beetle extends Insect {
+    public class Beetle extends Insect implements Crawlable{
 
         public Beetle(int mass, String name) {
             super(mass, name);
@@ -25,7 +27,17 @@ public abstract class Insect extends Animal{
         }
     }
 
-    public class Fly extends Insect {
+    public class Mosquito extends Insect implements Flyable{
+
+        public Mosquito(int mass, String name) {
+            super(mass, name);
+        }
+    }
+
+    public class Fly extends Insect implements Flyable {
+        public Fly(int mass, String name) {
+            super(mass, name);
+        }
     }
 
 

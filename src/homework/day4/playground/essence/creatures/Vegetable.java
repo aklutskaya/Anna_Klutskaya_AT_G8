@@ -6,16 +6,24 @@ public abstract class Vegetable extends Plant {
         super(mass, name);
     }
 
-    public class Potato extends Vegetable{
+    public class Potato extends Vegetable {
+        public Potato(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public class Carrot extends Vegetable{
+    public class Carrot extends Vegetable {
 
 
+        public Carrot(int mass, String name) {
+            super(mass, name);
+        }
     }
 
-    public  class Radish extends Vegetable {
+    public class Radish extends Vegetable {
+        public Radish(int mass, String name) {
+            super(mass, name);
+        }
     }
-
 
 }
