@@ -11,4 +11,12 @@ public class Car extends Vehicle {
         System.out.println(message);
         return pointB - pointA;
     }
+
+    @Override
+    public void drive(String direction) {
+
+        String directionMsg = String.format("I am %s, my name is %s and I amd driving to %s", getClass().getSimpleName(), name, direction);
+        System.out.println(directionMsg);
+
+    }
 }

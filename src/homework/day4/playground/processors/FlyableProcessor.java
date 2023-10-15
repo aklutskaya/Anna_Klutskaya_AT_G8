@@ -8,6 +8,7 @@ public class FlyableProcessor {
     public void runFlyable(Flyable flyable) {
 
         String direction = DirectionGenerator.generateDirection();
+        flyable.fly(direction);
 
     }
 
