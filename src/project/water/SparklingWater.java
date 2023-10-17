@@ -3,27 +3,42 @@ package project.water;
 public class SparklingWater extends Water {
 
     private Bubble[] bubbles;
-    public int numBubbles;
+    private boolean isOpened;
 
-    public SparklingWater(String color, String transparency, String smell, double temperature) {
-        super(color, transparency, smell, temperature);
-        this.numBubbles = 0;
-        this.bubbles = new Bubble[10000];
+    public SparklingWater() {
+        isOpened();
     }
 
-    public void pump(Bubble[] newBubbles) {
-        if (numBubbles + newBubbles.length <= bubbles.length) {
-            for (Bubble bubble : newBubbles) {
-                bubbles[numBubbles] = bubble;
-                numBubbles++;
+    public void pump(Bubble[] bubbles) {
+        this.bubbles = bubbles;
+        System.out.println("Pumping bubbles into water.");
+    }
+
+
+    private void degas() throws InterruptedException {
+        while (isOpened) {
+            int temperature = getTemperature();
+            int bubbleCount = 10 + 5 * temperature;
+
+            for (int i = 0; i < bubbleCount; i++) {
+
+                if (bubbles != null && i < bubbles.length) {
+                    bubbles[i].cramp();
+                }
+
             }
         }
+        Thread.sleep(1000);
     }
 
-    public void degas() {
-        if (numBubbles > 0) {
-            bubbles[numBubbles - 1].burst();
-            numBubbles--;
-        }
+    public void setOpened() throws InterruptedException {
+        System.out.println("Open a bottle.");
+        isOpened = true;
+        degas();
+    }
+
+    public void isOpened() {
+        System.out.println("Close Bottle");
+
     }
 }
