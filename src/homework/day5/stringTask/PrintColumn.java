@@ -7,10 +7,4 @@ public class PrintColumn {
             System.out.println(text.charAt(i));
         }
     }
-
-    public static void main(String[] args) {
-        PrintColumn printColumn = new PrintColumn();
-        printColumn.column("Вывод букв");
-
-    }
 }
