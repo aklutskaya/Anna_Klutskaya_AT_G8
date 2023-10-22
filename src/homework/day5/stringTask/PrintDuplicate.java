@@ -6,8 +6,7 @@ import java.util.stream.Collectors;
 public class PrintDuplicate {
 
     public void findDuplicates(String text) {
-        String s = "мама мыла раму мыла";
-        String[] dup = s.split(" ");
+        String[] dup = text.split(" ");
 
         for (int i = 0; i < dup.length; i++) {
             for (int a = i + 1; a < dup.length; a++) {
@@ -22,7 +21,7 @@ public class PrintDuplicate {
     public static void main(String[] args) {
 
         PrintDuplicate printDuplicate = new PrintDuplicate();
-        printDuplicate.findDuplicates("");
+        printDuplicate.findDuplicates("мама мыла раму мыла");
 
     }
 }
