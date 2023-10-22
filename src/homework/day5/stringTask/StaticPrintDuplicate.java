@@ -1,13 +1,10 @@
 package homework.day5.stringTask;
 
-import java.util.*;
-import java.util.stream.Collectors;
+public class StaticPrintDuplicate {
 
-public class PrintDuplicate {
+    public static void findDuplicates(String text) {
 
-    public void findDuplicates(String text) {
         String[] dup = text.split(" ");
-
         for (int i = 0; i < dup.length; i++) {
             for (int a = i + 1; a < dup.length; a++) {
                 if (dup[i].equals(dup[a])) {
@@ -15,6 +12,5 @@ public class PrintDuplicate {
                 }
             }
         }
-
     }
 }
