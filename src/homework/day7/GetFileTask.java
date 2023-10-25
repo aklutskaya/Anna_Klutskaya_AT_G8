@@ -1,8 +1,6 @@
 package homework.day7;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.List;
 
 public class GetFileTask {
 
