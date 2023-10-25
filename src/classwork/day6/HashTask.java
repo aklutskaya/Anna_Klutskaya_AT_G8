@@ -1,4 +1,4 @@
-package classwork;
+package classwork.day6;
 
 import java.util.Arrays;
 import java.util.HashSet;

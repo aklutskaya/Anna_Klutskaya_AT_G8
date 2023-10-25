@@ -1,4 +1,4 @@
-package classwork;
+package classwork.day5;
 
 public class GenericContainer<T> {
 
