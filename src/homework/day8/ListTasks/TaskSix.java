@@ -16,7 +16,7 @@ public class TaskSix {
         System.out.println();
 
         int count = 0;
-        Pattern pattern = Pattern.compile("[аоуея]");
+        Pattern pattern = Pattern.compile("[ауоыэяюёие]");
         for (String bird : birds) {
             Matcher matcher = pattern.matcher(bird);
             int letterCount = 0;
