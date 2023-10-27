@@ -23,7 +23,7 @@ public class ButterfliesTask {
                 count++;
             }
         }
-        System.out.print(count);
+        System.out.print("Количество о в бабочках: " + count);
         System.out.println();
 
         for (int i = 0; i < butterflies.size(); i++) {
@@ -32,7 +32,7 @@ public class ButterfliesTask {
         System.out.println();
 
         for (String fly : butterflies) {
-            System.out.println(fly + " ");
+            System.out.println(fly);
         }
     }
 }
