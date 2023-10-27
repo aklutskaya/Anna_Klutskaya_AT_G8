@@ -27,7 +27,8 @@ public class TaskNine {
         System.out.println("Сумма всех дробных частей: " + sum);
 
         for (int i = 0; i < doubles.size(); i++) {
-            System.out.print(doubles.get(i) + " ");
+            int intDouble = (int)Math.floor(doubles.get(i));
+            System.out.print(intDouble + " ");
         }
     }
 }
