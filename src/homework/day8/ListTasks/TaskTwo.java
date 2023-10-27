@@ -1,12 +1,11 @@
-package homework.day8;
+package homework.day8.ListTasks;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FiguresTask {
+public class TaskTwo {
 
     public static void main(String[] args) {
 
