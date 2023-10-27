@@ -1,7 +1,7 @@
 package homework.day8;
 
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,36 +11,38 @@ public class FiguresTask {
     public static void main(String[] args) {
 
         List<String> figures = Arrays.asList("Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс");
-        List<String> arrayFigures = new ArrayList<>(figures);
+//        List<String> arrayFigures = new ArrayList<>(figures);
 
-        try (FileWriter writer = new FileWriter("figure.txt")) {
-            for (String figure : arrayFigures) {
-                writer.write(figure);
-                writer.write("-");
+        try (PrintWriter writer = new PrintWriter("figure.txt")) {
+            for (String figure : figures) {
+                writer.print(figure);
+                if (figures.indexOf(figure) < figures.size() - 1) {
+                    writer.print("-");
+                }
             }
 
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
         }
 
         int count = 0;
-        for (String element : arrayFigures) {
+        for (String element : figures) {
             if (!element.contains("и")) {
                 count++;
             }
         }
-        System.out.print(count);
+        System.out.print("Вывод количества фигур, которые не содержат 'и': " + count);
         System.out.println();
 
-        for (int i = 0; i < arrayFigures.size(); i++) {
+        for (int i = 0; i < figures.size(); i++) {
             System.out.print(figures.get(i) + " ");
         }
         System.out.println();
 
-        arrayFigures.add(3, "Треугольник");
+        figures.set(3, "Треугольник");
 
-        for (String f : arrayFigures) {
-            System.out.print(f + " ");
+        for (String figure : figures) {
+            System.out.print(figure + " ");
         }
     }
 }
