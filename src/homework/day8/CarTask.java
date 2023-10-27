@@ -3,7 +3,6 @@ package homework.day8;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class CarTask {
@@ -27,11 +26,11 @@ public class CarTask {
             System.out.println(e.getMessage());
         }
 
-        Iterator<String> iterator = cars.iterator();
-        while (iterator.hasNext()) {
-            String car = iterator.next();
-            if (car.length() > 4) {
-                iterator.remove();
+        for (int i = 0; i < cars.size(); i++) {
+            int count = cars.get(i).length();
+            if (count > 4) {
+                cars.remove(i);
+                i--;
             }
         }
 
