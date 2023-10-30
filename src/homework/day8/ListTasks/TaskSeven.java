@@ -2,6 +2,8 @@ package homework.day8.ListTasks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TaskSeven {
 
@@ -21,8 +23,10 @@ public class TaskSeven {
         System.out.println();
 
         int count = 0;
+        Pattern pattern = Pattern.compile("^(\\S+-\\S+|\\S+ \\S+)$");
         for (String element : elements) {
-            if (element.contains("-") || element.contains(" ")) {
+            Matcher matcher = pattern.matcher(element);
+            if (matcher.matches()) {
                 count++;
             }
         }
