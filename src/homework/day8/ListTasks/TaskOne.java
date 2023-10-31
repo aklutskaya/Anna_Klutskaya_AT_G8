@@ -1,9 +1,9 @@
-package homework.day8;
+package homework.day8.ListTasks;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ButterfliesTask {
+public class TaskOne {
     public static void main(String[] args) {
 
         List<String> butterflies = new ArrayList<>();

@@ -1,9 +1,9 @@
-package homework.day8;
+package homework.day8.ListTasks;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountryTask {
+public class TaskFive {
 
     public static void main(String[] args) {
 

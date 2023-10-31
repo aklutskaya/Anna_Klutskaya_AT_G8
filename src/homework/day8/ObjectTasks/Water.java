@@ -1,4 +1,4 @@
-package homework.day8;
+package homework.day8.ObjectTasks;
 
 import java.util.Objects;
 
