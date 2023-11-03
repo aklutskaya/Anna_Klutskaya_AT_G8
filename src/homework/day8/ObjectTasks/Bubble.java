@@ -1,5 +1,7 @@
 package homework.day8.ObjectTasks;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Bubble {
@@ -46,5 +48,40 @@ public class Bubble {
     @Override
     public int hashCode() {
         return Objects.hash(volume, name);
+    }
+
+    public static void main(String[] args) {
+
+        List<Bubble> bubbles = Arrays.asList
+                (new Bubble(2, "CO2"), new Bubble(4, "O2"), new Bubble(5, "CO"));
+
+//        Проитерировать список через for-each и отпечатать объемы в консоль через пробел
+
+        for (Bubble bubble : bubbles) {
+            System.out.print(bubble.getVolume() + " ");
+        }
+        System.out.println();
+
+//        Проитерировать список через for-each и отпечатать имена в консоль через пробел
+
+        for (Bubble bubble : bubbles) {
+            System.out.print(bubble.getName() + " ");
+        }
+        System.out.println();
+
+//        Посчитать объем всех пузырей и вывести число в консоль
+
+        int volumeSum = 0;
+        for (Bubble bubble : bubbles) {
+            volumeSum += bubble.getVolume();
+        }
+        System.out.println("Объем всех пузырей: " + volumeSum);
+
+//        Проитерировать список по индексу и отпечатать пузыри (.toString()) в консоль с новой строки
+
+        for (int i = 0; i < bubbles.size(); i++) {
+            System.out.println(bubbles.get(i).toString());
+        }
+
     }
 }

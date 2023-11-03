@@ -1,5 +1,7 @@
 package homework.day8.ObjectTasks;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class Water {
@@ -46,5 +48,20 @@ public class Water {
     @Override
     public int hashCode() {
         return Objects.hash(color, smell);
+    }
+
+    public static void main(String[] args) {
+
+        List<Water> water = Arrays.asList(
+                new Water("Прозрачная", "Нет"),
+                new Water("Прозрачная", "Нет"),
+                new Water("Мутная", "Аммиачный")
+        );
+
+//        Проитерировать список через for-each и отпечатать пары цвет-вода через тире в консоль с новой строки
+
+        for (Water element : water) {
+            System.out.println(element.color + "-" + element.smell);
+        }
     }
 }
